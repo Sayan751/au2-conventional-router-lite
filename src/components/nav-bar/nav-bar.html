@@ -1,0 +1,11 @@
+<style>
+  .active {
+    font-weight: bold;
+  }
+</style>
+<nav>
+  <template repeat.for="route of navModel.routes">
+    <a href.bind="route.path | firstNonEmpty" active.class="route.isActive">${route.title}</a>
+  </template>
+  <au-slot></au-slot>
+</nav>
